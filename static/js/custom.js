@@ -205,8 +205,9 @@
                 speed: 200,
                 loop:true,
                 strings: [
-                  'Designer',
-                  'Developer'
+                  'React Builder',
+                  'API Developer',
+                  'Web3 Learner'
                 ],
                 breakLines: false
             }); 
