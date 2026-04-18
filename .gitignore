@@ -26,3 +26,4 @@ build/
 .env
 .env.*
 
+static/img
