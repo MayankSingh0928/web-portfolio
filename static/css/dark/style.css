@@ -166,11 +166,23 @@ Primary use:    pxdraft
 -------------------*/
 .blog-post {
   border-radius: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05); }
   .blog-post .blog-img {
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 285px;
+    flex: 0 0 285px; }
+    .blog-post .blog-img a {
+      display: block;
+      height: 100%; }
     .blog-post .blog-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       transition: ease all 0.35s;
       -webkit-transform: scale(1);
       transform: scale(1); }
@@ -206,13 +218,20 @@ Primary use:    pxdraft
   .blog-post .blog-info {
     padding: 25px;
     position: relative;
-    background: rgba(255, 255, 255, 0.05); }
+    background: rgba(255, 255, 255, 0.05);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column; }
     .blog-post .blog-info h6 {
       font-size: 18px;
       font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0;
       margin-bottom: 15px; }
       .blog-post .blog-info h6 a {
-        color: #fff; }
+        color: #fff;
+        word-break: normal;
+        overflow-wrap: normal; }
     .blog-post .blog-info p {
       display: -webkit-box;
       overflow: hidden;
@@ -220,6 +239,8 @@ Primary use:    pxdraft
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       margin: 0 0 12px; }
+    .blog-post .blog-info .btn-bar {
+      margin-top: auto; }
     .blog-post .blog-info .btn-bar a {
       font-weight: 600;
       text-transform: uppercase;
@@ -241,6 +262,20 @@ Primary use:    pxdraft
     .blog-listing .blog-post .blog-info {
       margin: 0;
       box-shadow: none; }
+
+@media (max-width: 1199px) {
+  .blog-post .blog-img {
+    height: 245px;
+    flex-basis: 245px; } }
+
+@media (max-width: 767px) {
+  .blog-post .blog-img {
+    height: 220px;
+    flex-basis: 220px; }
+  .blog-post .blog-info {
+    padding: 22px; }
+  .blog-post .blog-info h6 {
+    font-size: 17px; } }
 
 .pagination .page-item .page-link {
   border: none;
